@@ -26,6 +26,10 @@ export const QUOTES = [
   {
     author: "Aristotle",
     quote: "It is during our darkest moments that we must focus to see the light."
+  },
+  {
+    author: "Bee",
+    quote: "Lo que sera, sera."
   }
 ];
 
