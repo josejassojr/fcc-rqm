@@ -1,3 +1,18 @@
 html {
-  background-color: rgb(59, 160, 160);
+  background-color: #93B7BE;
+  text-align: center;
 }
+#quote-box {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  font-family: 'Azeret Mono', monospace; 
+  color: white;
+  border-style: solid;
+  border-color: black;
+  width: 70vw;
+  height: 40vh;
+  background-color: #554348;
+}
+
