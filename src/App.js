@@ -19,12 +19,6 @@ class QuoteBox extends Component {
     });
   }
 
-  // copyQuote(quote) {
-  //   const ret = quote.quote + " -" + quote.author;
-  //   console.log(ret);
-  //   navigator.clipboard.writeText(ret);
-  // }
-
   render() {
     return (
       <div className="QuoteBox" id="quote-box">
