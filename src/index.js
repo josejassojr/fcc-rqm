@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import QuoteBox from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <QuoteBox />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
