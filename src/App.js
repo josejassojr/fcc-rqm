@@ -3,14 +3,13 @@ import { QUOTES } from "./quotes";
 
 const lenQuotes = QUOTES.length;
 
-class QuoteBox extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       index: Math.floor(Math.random() * lenQuotes)
     };
     this.getNewQuote = this.getNewQuote.bind(this);
-    // this.copyQuote = this.copyQuote.bind(this);
   }
 
   getNewQuote() {
@@ -19,34 +18,20 @@ class QuoteBox extends Component {
     });
   }
 
-  // copyQuote(quote) {
-  //   const ret = quote.quote + " -" + quote.author;
-  //   console.log(ret);
-  //   navigator.clipboard.writeText(ret);
-  // }
-
   render() {
     return (
+      < div className="App" >
+        <h1 className="header">
+          Random Quotes
+        </h1>
       <div className="QuoteBox" id="quote-box">
-        <div id="text">
-          <i className="fas fa-quote-left"></i> {QUOTES[this.state.index].quote}
+        <div id="quote-container">
+          <div id="text">
+            <i className="fas fa-quote-left"></i>{" "}
+            {QUOTES[this.state.index].quote}
+          </div>
+          <div id="author">-{QUOTES[this.state.index].author}</div>
         </div>
-        <div id="author">-{QUOTES[this.state.index].author}</div>
-        <button
-          id="copy-quote"
-          onClick={() =>
-            navigator.clipboard.writeText(
-              QUOTES[this.state.index].quote +
-                " -" +
-                QUOTES[this.state.index].author
-            )
-          }
-        >
-          <i className="far fa-clipboard"></i>
-        </button>
-        <button className="btn" id="new-quote" onClick={this.getNewQuote}>
-          New Quote
-        </button>
         <button className="btn" id="tweet-btn">
           <a
             id="tweet-quote"
@@ -59,12 +44,15 @@ class QuoteBox extends Component {
               "&hashtags=FCC"
             }
           >
-            <i className="fab fa-twitter"></i>
+            <i id="twitter-icon" className="fab fa-twitter"></i>
           </a>
         </button>
-      </div>
+        <button className="btn" id="new-quote" onClick={this.getNewQuote}>
+          New Quote
+        </button>
+      </div></ div>
     );
   }
 }
 
-export default QuoteBox;
+export default App;
